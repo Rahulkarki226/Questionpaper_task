@@ -1,0 +1,546 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Science Exam Paper – Class VII</title>
+    <style>
+        :root {
+            --ink: #111;
+            --muted: #555;
+            --line: #bbb;
+            --accent: #0b5;
+        }
+
+        @page {
+            size: A4;
+            margin: 14mm;
+        }
+
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: "Times New Roman", serif;
+            color: var(--ink);
+            background: #fff;
+            line-height: 1.45;
+            margin: 0 auto;
+            max-width: 210mm;
+            padding: 10mm 12mm 16mm;
+            font-size: 14.5px;
+        }
+
+        .header {
+            border: 2px solid #000;
+            padding: 14px 16px;
+            text-align: center;
+            margin-bottom: 14px;
+        }
+
+        .school-name {
+            font-size: 20px;
+            font-weight: 700;
+            letter-spacing: .2px;
+        }
+
+        .exam-details {
+            font-size: 14px;
+            margin-top: 2px;
+        }
+
+        .exam-info {
+            margin-top: 8px;
+            display: flex;
+            justify-content: space-between;
+            font-weight: 700;
+        }
+
+        .badge {
+            display: inline-block;
+            font-size: 12px;
+            font-weight: 700;
+            border: 1px solid #000;
+            padding: 2px 6px;
+            border-radius: 6px;
+        }
+
+        .instructions {
+            border: 1px solid var(--line);
+            background: #f8f8f8;
+            padding: 10px 12px;
+            margin: 14px 0 10px;
+        }
+
+        .section {
+            padding: 10px 12px;
+            margin: 12px 0;
+        }
+
+        .section-title {
+            font-weight: 700;
+            margin-bottom: 8px;
+            display: flex;
+            justify-content: space-between;
+            align-items: baseline;
+        }
+
+        .marks-note {
+            font-weight: 700;
+        }
+
+        .question {
+            margin: 8px 0;
+        }
+
+        .qrow {
+            display: flex;
+            gap: 8px;
+            align-items: baseline;
+        }
+
+        .qno {
+            width: 26px;
+            font-weight: 700;
+        }
+
+        .qtext {
+            flex: 1;
+        }
+
+        .marks {
+            float: right;
+            font-weight: 700;
+            font-size: 12px;
+        }
+
+        .mcq-options {
+            margin: 6px 0 4px 28px;
+        }
+
+        .fill-blank {
+            border-bottom: 1px solid #000;
+            min-width: 110px;
+            display: inline-block;
+            height: 18px;
+        }
+
+        .grid {
+            display: grid;
+            gap: 10px;
+            margin-top: 8px;
+            grid-template-columns: repeat(3, 1fr);
+        }
+
+        .img-card {
+            border: 1px dashed var(--line);
+            padding: 6px;
+            text-align: center;
+            font-size: 12px;
+        }
+
+        .img-card img {
+            max-width: 100%;
+            height: 240px;
+            object-fit: contain;
+            display: block;
+            margin: 0 auto 6px;
+        }
+
+        .label {
+            font-weight: 700;
+        }
+
+        .pattern-box {
+            width: 44px;
+            height: 30px;
+            border: 1px solid #000;
+            display: inline-block;
+            text-align: center;
+            line-height: 30px;
+            margin: 2px;
+        }
+
+        ol,
+        ul {
+            margin: 6px 0;
+            padding-left: 18px;
+        }
+
+        .muted {
+            color: var(--muted);
+        }
+
+        .spacer {
+            height: 6px;
+        }
+
+        .tfa {
+            margin: 6px 0;
+        }
+
+        .subpart {
+            margin-left: 28px;
+        }
+
+        .two-col {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 8px 18px;
+        }
+
+        .small {
+            font-size: 12px;
+            color: var(--muted);
+        }
+
+        .matching {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 10px 28px;
+        }
+
+        .matching .left,
+        .matching .right {
+            border: 1px solid var(--line);
+            padding: 10px;
+        }
+
+        .rule {
+            border-top: 1px dashed var(--line);
+            margin: 10px 0;
+        }
+
+        .answer-lines>div {
+            border-bottom: 1px dotted #000;
+            height: 18px;
+            margin: 6px 0;
+        }
+
+        .diagram {
+            border: 1px dashed var(--line);
+            padding: 8px;
+            text-align: center;
+        }
+
+        .diagram img {
+            max-width: 100%;
+            height: auto;
+        }
+    </style>
+</head>
+
+<body> <!-- Header -->
+    <div class="header">
+        <div class="school-name">SHRI RAM JANKI PUBLIC SCHOOL</div>
+        <div class="exam-details">HALF YEARLY EXAMINATION (2025–26)</div>
+        <div class="exam-details">SUBJECT – <strong>SCIENCE</strong></div>
+        <div class="exam-details">CLASS – VII</div>
+        <div class="exam-info"> <span>TIME – 3 Hours</span> <span>M.M – 80</span> </div>
+    </div> <!-- General Instructions -->
+    <div class="instructions">
+        <div class="section-title"> <span>General Instructions</span> <span class="badge">Read Carefully</span> </div>
+        <ul>
+            <li>All questions are compulsory. Read each question carefully before answering.</li>
+            <li>Write answers neatly. Show working wherever required.</li>
+            <li>Marks for each question are indicated in <strong class="marks">[ ]</strong>.</li>
+        </ul>
+    </div> <!-- Q1 -->
+    <div class="section">
+        <div class="section-title"> <span>Q.1) Tick (<span class="muted">✓</span>) the correct option.</span> <span
+                class="marks-note">[1 × 10 = 10]</span> </div>
+        <div class="question">
+            <div class="qrow">
+                <div class="qno">1)</div>
+                <div class="qtext">Litmus, a natural dye, is an extract of which of the following? <span
+                        class="marks">[1]</span></div>
+            </div>
+            <div class="mcq-options">(a) China Rose &nbsp;&nbsp; (b) Beetroot &nbsp;&nbsp; (c) Lichen</div>
+        </div>
+        <div class="question">
+            <div class="qrow">
+                <div class="qno">2)</div>
+                <div class="qtext">Which of the following is a chemical change? <span class="marks">[1]</span></div>
+            </div>
+            <div class="mcq-options">(a) Cutting of fruits &nbsp;&nbsp; (b) Cooking of vegetables &nbsp;&nbsp; (c)
+                Boiling of water</div>
+        </div>
+        <div class="question">
+            <div class="qrow">
+                <div class="qno">3)</div>
+                <div class="qtext">Two organisms live together: one provides shelter, water &amp; nutrients, while the
+                    other prepares and provides food. This relationship is called: <span class="marks">[1]</span></div>
+            </div>
+            <div class="mcq-options">(a) Parasite &nbsp;&nbsp; (b) Autotroph &nbsp;&nbsp; (c) Symbiosis</div>
+        </div>
+        <div class="question">
+            <div class="qrow">
+                <div class="qno">4)</div>
+                <div class="qtext">The liquid metal used in thermometers is: <span class="marks">[1]</span></div>
+            </div>
+            <div class="mcq-options">(a) Copper &nbsp;&nbsp; (b) Mercury &nbsp;&nbsp; (c) Gold</div>
+        </div>
+        <div class="question">
+            <div class="qrow">
+                <div class="qno">5)</div>
+                <div class="qtext"><em>Pitcher plant</em> is an example of: <span class="marks">[1]</span></div>
+            </div>
+            <div class="mcq-options">(a) Insectivorous plant &nbsp;&nbsp; (b) Leguminous plant &nbsp;&nbsp; (c) Fungi
+            </div>
+        </div>
+        <div class="question">
+            <div class="qrow">
+                <div class="qno">6)</div>
+                <div class="qtext">Which of the following is <em>not</em> a part of the digestive system? <span
+                        class="marks">[1]</span></div>
+            </div>
+            <div class="mcq-options">(a) Food pipe &nbsp;&nbsp; (b) Wind pipe &nbsp;&nbsp; (c) Stomach</div>
+        </div>
+        <div class="question">
+            <div class="qrow">
+                <div class="qno">7)</div>
+                <div class="qtext">Which of the following is the SI unit of speed? <span class="marks">[1]</span></div>
+            </div>
+            <div class="mcq-options">(a) m &nbsp;&nbsp; (b) m/s &nbsp;&nbsp; (c) m/s²</div>
+        </div>
+        <div class="question">
+            <div class="qrow">
+                <div class="qno">8)</div>
+                <div class="qtext">A wooden spoon is dipped in a cup of ice cream. Its other end: <span
+                        class="marks">[1]</span></div>
+            </div>
+            <div class="mcq-options">(a) does not become cold &nbsp;&nbsp; (b) becomes cold by the process of radiation
+                &nbsp;&nbsp; (c) become cold by the process of convection</div>
+        </div>
+        <div class="question">
+            <div class="qrow">
+                <div class="qno">9)</div>
+                <div class="qtext">A car travelled 60 km in 2 hours. Its speed will be: <span class="marks">[1]</span>
+                </div>
+            </div>
+            <div class="mcq-options">(a) 120 km/h &nbsp;&nbsp; (b) 30 km/h &nbsp;&nbsp; (c) 20 km/h</div>
+        </div>
+        <div class="question">
+            <div class="qrow">
+                <div class="qno">10)</div>
+                <div class="qtext">When an acid reacts with a base, the products formed are: <span
+                        class="marks">[1]</span></div>
+            </div>
+            <div class="mcq-options">(a) Only salt &nbsp;&nbsp; (b) Salt + base &nbsp;&nbsp; (c) Salt + water</div>
+        </div>
+    </div> <!-- Q2 -->
+    <div class="section">
+        <div class="section-title"> <span>Q.2) Fill in the blanks.</span> <span class="marks-note">[1 × 10 = 10]</span>
+        </div>
+        <div class="question">a) Motion of a train on a straight bridge is <span class="fill-blank"></span> motion.
+            <span class="marks">[1]</span></div>
+        <div class="question">b) Green plants are called <span class="fill-blank"></span> since they synthesize their
+            own food. <span class="marks">[1]</span></div>
+        <div class="question">c) The largest gland in the human body is <span class="fill-blank"></span>. <span
+                class="marks">[1]</span></div>
+        <div class="question">d) Temperature of boiling water can't be measured by a <span class="fill-blank"></span>
+            thermometer. <span class="marks">[1]</span></div>
+        <div class="question">e) The solution which do not change the colour of either red or blue litmus paper are
+            called <span class="fill-blank"></span> solution. <span class="marks">[1]</span></div>
+        <div class="question">f) Two methods by which rusting of iron can be prevented are <span
+                class="fill-blank"></span> and <span class="fill-blank"></span>. <span class="marks">[1]</span></div>
+        <div class="question">g) When carbon-dioxide is passed through lime water, it turns milky due to the formation
+            of <span class="fill-blank"></span>. <span class="marks">[1]</span></div>
+        <div class="question">h) Amoeba engulfs food with the help of <span class="fill-blank"></span>. <span
+                class="marks">[1]</span></div>
+        <div class="question">i) The acid present in spinach is <span class="fill-blank"></span>. <span
+                class="marks">[1]</span></div>
+        <div class="question">j) Distance between two cities is measured in <span class="fill-blank"></span>. <span
+                class="marks">[1]</span></div>
+    </div> <!-- Q3 -->
+    <div class="section">
+        <div class="section-title"> <span>Q.3) State True (T) or False (F).</span> <span class="marks-note">[1 × 10 =
+                10]</span> </div>
+        <div class="tfa">a) The basic unit of time is Second – ( &nbsp;&nbsp;&nbsp; ) <span class="marks">[1]</span>
+        </div>
+        <div class="tfa">b) Speed = Distance × Time – ( &nbsp;&nbsp;&nbsp; ) <span class="marks">[1]</span></div>
+        <div class="tfa">c) Condensation of steam is not a chemical change – ( &nbsp;&nbsp;&nbsp; ) <span
+                class="marks">[1]</span></div>
+        <div class="tfa">d) Iron and rust are same substance – ( &nbsp;&nbsp;&nbsp; ) <span class="marks">[1]</span>
+        </div>
+        <div class="tfa">e) Tooth decay is caused by presence of base – ( &nbsp;&nbsp;&nbsp; ) <span
+                class="marks">[1]</span></div>
+        <div class="tfa">f) Sodium hydroxide turns blue litmus red – ( &nbsp;&nbsp;&nbsp; ) <span
+                class="marks">[1]</span></div>
+        <div class="tfa">g) The small intestine is the longest part of the digestive system – ( &nbsp;&nbsp;&nbsp; )
+            <span class="marks">[1]</span></div>
+        <div class="tfa">h) The maximum–minimum thermometer is used to measure the daily temperature of the atmosphere –
+            ( &nbsp;&nbsp;&nbsp; ) <span class="marks">[1]</span></div>
+        <div class="tfa">i) Radiation requires a medium for heat transfer – ( &nbsp;&nbsp;&nbsp; ) <span
+                class="marks">[1]</span></div>
+        <div class="tfa">j) The ruminants bring back swallowed grass into their mouth and chew it for some time – (
+            &nbsp;&nbsp;&nbsp; ) <span class="marks">[1]</span></div>
+    </div> <!-- Q4 -->
+    <div class="section">
+        <div class="section-title"> <span>Q.4) Label the given diagram of the digestive system.</span> <span
+                class="marks-note">[1 × 3 = 3]</span> </div>
+        <div class="diagram"> <img alt="Human digestive system labelling diagram" src="picture1.jpg" /> </div>
+        <div class="small muted" style="margin-top:6px;">Write the names of parts for labels <strong>1–6</strong>.</div>
+    </div> <!-- Q5 -->
+    <div class="section">
+        <div class="section-title"> <span>Q.5) Match the following. (Write the correct letter a–j in front of each
+                number.)</span> <span class="marks-note">[1 × 10 = 10]</span> </div>
+        <div class="matching">
+            <div class="left">
+                <ol>
+                    <li>Storage of undigested food</li>
+                    <li><em>Cuscuta</em></li>
+                    <li>Digestion of food</li>
+                    <li>Fats</li>
+                    <li>Odometer</li>
+                    <li>Natural indicator</li>
+                    <li>Speed meter</li>
+                    <li>Sulphuric acid</li>
+                    <li>Light coloured clothes are preferred during</li>
+                    <li>Sea breeze blows during</li>
+                </ol>
+            </div>
+            <div class="right">
+                <ol type="a">
+                    <li>Summers</li>
+                    <li>China Rose</li>
+                    <li>Measure speed</li>
+                    <li>Chemical change</li>
+                    <li>Parasite</li>
+                    <li>Measure distance travelled by vehicle</li>
+                    <li>Day</li>
+                    <li>H<sub>2</sub>SO<sub>4</sub></li>
+                    <li>Fatty acid &amp; glycerol</li>
+                    <li>Rectum</li>
+                </ol>
+            </div>
+        </div>
+    </div> <!-- Q6 -->
+    <div class="section">
+        <div class="section-title"> <span>Q.6) Look at the figure. Mark where the heat is transferred by
+                <em>conduction</em>, by <em>convection</em> and by <em>radiation</em>.</span> <span
+                class="marks-note">[1 × 3 = 3]</span> </div>
+        <div class="diagram"> <img alt="Conduction, convection and radiation diagram" src="picture2.png" /> </div>
+        <div class="subpart" style="margin-top:8px;"> 1 → <span class="fill-blank" style="min-width:140px;"></span>
+            &nbsp;&nbsp; 2 → <span class="fill-blank" style="min-width:140px;"></span> &nbsp;&nbsp; 3 → <span
+                class="fill-blank" style="min-width:140px;"></span> </div>
+    </div> <!-- Q7 -->
+    <div class="section">
+        <div class="section-title"> <span>Q.7) Complete the spelling (write the correct spellings).</span> <span
+                class="marks-note">[0.5 × 6 = 3]</span> </div>
+        <div class="question">a) T e m p e r a t __ r e → <span class="fill-blank"></span></div>
+        <div class="question">b) N o n – m e t __ l s → <span class="fill-blank"></span></div>
+        <div class="question">c) C r y s t a l l i s a __ i o n → <span class="fill-blank"></span></div>
+        <div class="question">d) A c c e l e r a t __ o n → <span class="fill-blank"></span></div>
+        <div class="question">e) G r a __ h → <span class="fill-blank"></span></div>
+        <div class="question">f) D i g e s t __ o n → <span class="fill-blank"></span></div>
+    </div> <!-- Q8 -->
+    <div class="section">
+        <div class="section-title"> <span>Q.8) Differentiate between the following (give any two points for
+                each).</span> <span class="marks-note">[2 × 4 = 8]</span> </div>
+        <div class="question">a) Physical change and Chemical change.</div>
+        <div class="answer-lines">
+            <div></div>
+            <div></div>
+        </div>
+        <div class="question">b) Land breeze and Sea breeze.</div>
+        <div class="answer-lines">
+            <div></div>
+            <div></div>
+        </div>
+        <div class="question">c) Acid and Base.</div>
+        <div class="answer-lines">
+            <div></div>
+            <div></div>
+        </div>
+        <div class="question">d) Clinical thermometer and Laboratory thermometer.</div>
+        <div class="answer-lines">
+            <div></div>
+            <div></div>
+        </div>
+    </div> <!-- Q9 -->
+    <div class="section">
+        <div class="section-title"> <span>Q.9) Very short answer type questions.</span> <span class="marks-note">[0.5 ×
+                10 = 5]</span> </div>
+        <div class="question">a) Name the motion of the earth around the sun. <span class="fill-blank"
+                style="width:55%"></span></div>
+        <div class="question">b) What product is formed when vinegar reacts with baking soda? <span class="fill-blank"
+                style="width:55%"></span></div>
+        <div class="question">c) What is the chemical name of baking soda? <span class="fill-blank"
+                style="width:55%"></span></div>
+        <div class="question">d) Which base is found in soap? <span class="fill-blank" style="width:55%"></span></div>
+        <div class="question">e) Which type of clothes should we wear in winters? <span class="fill-blank"
+                style="width:55%"></span></div>
+        <div class="question">f) What is the normal body temperature of humans? <span class="fill-blank"
+                style="width:55%"></span></div>
+        <div class="question">g) What is the SI unit of temperature? <span class="fill-blank" style="width:55%"></span>
+        </div>
+        <div class="question">h) Name the finger-like projections in the small intestine. <span class="fill-blank"
+                style="width:55%"></span></div>
+        <div class="question">i) Name the process by which green plants make their own food. <span class="fill-blank"
+                style="width:55%"></span></div>
+        <div class="question">j) What is the chemical formula of lime water? <span class="fill-blank"
+                style="width:55%"></span></div>
+    </div> <!-- Q10 -->
+    <div class="section">
+        <div class="section-title"> <span>Q.10) Short answer type questions.</span> <span class="marks-note">[2 × 5 =
+                10]</span> </div>
+        <div class="question">1) Describe the process of neutralisation with the help of an example. Write the reaction
+            also.</div>
+        <div class="answer-lines">
+            <div></div>
+            <div></div>
+            <div></div>
+        </div>
+        <div class="question">2) The distance between two stations is 570 km. A train takes 3 hours to cover the
+            distance. Calculate the speed of the train.</div>
+        <div class="answer-lines">
+            <div></div>
+            <div></div>
+        </div>
+        <div class="question">3) Write down the colour change by the following natural indicators when added to acids
+            and bases.</div>
+        <div class="subpart" style="margin-top:6px;">
+            <div>China Rose – Acid: <span class="fill-blank" style="min-width:120px;"></span> &nbsp; Base: <span
+                    class="fill-blank" style="min-width:120px;"></span></div>
+            <div>Litmus – Acid: <span class="fill-blank" style="min-width:120px;"></span> &nbsp; Base: <span
+                    class="fill-blank" style="min-width:120px;"></span></div>
+        </div>
+        <div class="question">4) What is rusting of iron? State any two methods to prevent rusting.</div>
+        <div class="answer-lines">
+            <div></div>
+            <div></div>
+        </div>
+        <div class="question">5) Define the terms: (i) Conductor (ii) Indicator (iii) Motion (iv) Insulator.</div>
+        <div class="answer-lines">
+            <div></div>
+            <div></div>
+            <div></div>
+        </div>
+    </div> <!-- Q11 -->
+    <div class="section">
+        <div class="section-title"> <span>Q.11) Long answer type questions.</span> <span class="marks-note">[Total =
+                8]</span> </div>
+        <div class="question">1) Describe how crystals of copper sulphate are prepared. <span class="marks">[3]</span>
+        </div>
+        <div class="answer-lines">
+            <div style="height:22px"></div>
+            <div style="height:22px"></div>
+            <div style="height:22px"></div>
+            <div style="height:22px"></div>
+        </div>
+        <div class="question">2) Show the shape of the distance–time graph in the following cases: (i) a car moving with
+            a constant speed, (ii) a car parked on a side road. <span class="marks">[2]</span></div>
+        <div class="answer-lines">
+            <div style="height:22px"></div>
+            <div style="height:22px"></div>
+        </div>
+        <div class="question">3) Draw a labelled diagram of Amoeba and label three parts – nucleus, food vacuole and
+            pseudopodia. <span class="marks">[3]</span></div>
+        <div class="diagram" style="height:260px;"></div>
+    </div>
+</body>
+
+</html>
