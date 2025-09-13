@@ -1,0 +1,561 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>SHRI RAM JANKI PUBLIC SCHOOL – EVS Exam Paper (Class IV)</title>
+    <style>
+        :root {
+            --ink: #111;
+            --muted: #555;
+            --line: #bbb;
+            --accent: #0b5;
+        }
+
+        @page {
+            size: A4;
+            margin: 14mm;
+        }
+
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: "Times New Roman", serif;
+            color: var(--ink);
+            background: #fff;
+            line-height: 1.45;
+            margin: 0 auto;
+            max-width: 210mm;
+            padding: 10mm 12mm 16mm;
+            font-size: 14.5px;
+        }
+
+        /* Header */
+        .header {
+            border: 2px solid #000;
+            padding: 14px 16px;
+            text-align: center;
+            margin-bottom: 14px;
+        }
+
+        .school-name {
+            margin: 0;
+            font-size: 22px;
+            font-weight: 700;
+            letter-spacing: .2px;
+            text-transform: uppercase;
+        }
+
+        .exam-details {
+            font-size: 14px;
+            margin-top: 2px;
+        }
+
+        .exam-info {
+            margin-top: 8px;
+            display: flex;
+            justify-content: space-between;
+            font-weight: 700;
+        }
+
+        /* Layout */
+        .instructions {
+            border: 1px solid var(--line);
+            background: #f8f8f8;
+            padding: 10px 12px;
+            margin: 14px 0 10px;
+        }
+
+        .section {
+            padding: 10px 12px;
+            margin: 12px 0;
+        }
+
+        .section-title {
+            font-weight: 700;
+            margin-bottom: 8px;
+            display: flex;
+            justify-content: space-between;
+            align-items: baseline;
+        }
+
+        .marks-note {
+            font-weight: 700;
+        }
+
+        .question {
+            margin: 8px 0;
+        }
+
+        .qrow {
+            display: flex;
+            gap: 8px;
+            align-items: baseline;
+        }
+
+        .qno {
+            width: 26px;
+            font-weight: 700;
+        }
+
+        .qtext {
+            flex: 1;
+        }
+
+        .marks {
+            float: right;
+            font-weight: 700;
+            font-size: 12px;
+        }
+
+        .mcq-options {
+            margin: 6px 0 4px;
+        }
+
+        .fill-blank {
+            border-bottom: 1px solid #000;
+            min-width: 110px;
+            display: inline-block;
+            height: 18px;
+        }
+
+        .grid {
+            display: grid;
+            gap: 10px;
+            margin-top: 8px;
+            grid-template-columns: repeat(3, 1fr);
+        }
+
+        /* Q1 image cards — cleaner presentation */
+        .grid.q1 {
+            grid-template-columns: repeat(3, 1fr);
+        }
+
+        .img-card {
+            border: 1px solid var(--line);
+            padding: 8px;
+            font-size: 12px;
+            position: relative;
+            border-radius: 8px;
+            background: #fff;
+        }
+
+        .img-card img {
+            width: 100%;
+            height: 140px;
+            object-fit: cover;
+            border-radius: 6px;
+            display: block;
+        }
+
+        .img-tag {
+            position: absolute;
+            top: 6px;
+            left: 6px;
+            width: 24px;
+            height: 24px;
+            line-height: 24px;
+            text-align: center;
+            border: 1px solid var(--line);
+            background: #fff;
+            border-radius: 50%;
+            font-weight: 700;
+            font-size: 12px;
+        }
+
+        .label {
+            font-weight: 700;
+        }
+
+        .pattern-box {
+            width: 44px;
+            height: 30px;
+            border: 1px solid #000;
+            display: inline-block;
+            text-align: center;
+            line-height: 30px;
+            margin: 2px;
+        }
+
+        ol,
+        ul {
+            margin: 6px 0;
+            padding-left: 18px;
+        }
+
+        .muted {
+            color: var(--muted);
+        }
+
+        .spacer {
+            height: 6px;
+        }
+
+        .tfa {
+            margin: 6px 0;
+        }
+
+        .subpart {
+            margin-left: 28px;
+        }
+
+        .two-col {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 8px 18px;
+        }
+
+        .small {
+            font-size: 12px;
+            color: var(--muted);
+        }
+
+        /* Inline images for later questions */
+        .inline-img {
+            border: 2px solid var(--line);
+            border-radius: 8px;
+            margin: 8px 0;
+            height: 120px;
+            width: 160px;
+            object-fit: cover;
+            display: block;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        /* Enhanced image containers for Q8 and Q9 */
+        .question-with-image {
+            display: flex;
+            flex-direction: column;
+            gap: 8px;
+        }
+
+        .image-container {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            margin: 8px 0;
+            padding: 8px;
+            background: #f9f9f9;
+            border-radius: 8px;
+            border: 1px solid var(--line);
+        }
+
+        .image-container img {
+            height: 140px;
+            width: 180px;
+            object-fit: cover;
+            border: 2px solid var(--line);
+            border-radius: 8px;
+            box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
+        }
+
+        .image-label {
+            font-weight: 600;
+            color: var(--ink);
+            font-size: 13px;
+        }
+
+        .badge {
+            background: var(--accent);
+            color: white;
+            padding: 2px 6px;
+            border-radius: 4px;
+            font-size: 11px;
+            font-weight: 700;
+        }
+
+        @media (max-width: 760px) {
+            .grid.q1 {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+
+        @media print {
+            body {
+                max-width: none;
+                padding: 0;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Header -->
+    <div class="header">
+        <h1 class="school-name">SHRI RAM JANKI PUBLIC SCHOOL</h1>
+        <div class="exam-details">HALF YEARLY EXAMINATION (2025–26)</div>
+        <div class="exam-details">SUBJECT – ENVIRONMENTAL STUDIES (E.V.S.)</div>
+        <div class="exam-details">CLASS – IV</div>
+        <div class="exam-info">
+            <span>TIME – 3 Hours</span>
+            <span>M.M – 80</span>
+        </div>
+    </div>
+
+    <!-- General Instructions -->
+    <div class="instructions">
+        <div class="section-title">
+            <span>General Instructions</span>
+            <span class="badge">Read Carefully</span>
+        </div>
+        <ul>
+            <li>All questions are compulsory.</li>
+            <li>Read each question carefully before answering.</li>
+            <li>Write answers neatly in the spaces provided.</li>
+        </ul>
+        <div class="small">Note: Marks for each question are indicated in <strong class="marks">[ ]</strong>.</div>
+    </div>
+
+    <!-- Q1 (images only; no "view photo" or item text) -->
+    <div class="section">
+        <div class="section-title">
+            <span>Q.1) Multiple Choice Questions.</span>
+            <span class="marks-note">[1 × 10 = 10]</span>
+        </div>
+        <div class="grid q1">
+            <!-- a -->
+            <div class="img-card">
+                <span class="img-tag">a</span>
+                <img src="https://commons.wikimedia.org/wiki/Special:FilePath/Asian%20Elephant%20at%20Corbett%20National%20Park.jpg" alt="Elephant">
+                <div class="mcq-options">(i) Elephant &nbsp;&nbsp; (ii) Rhinoceros &nbsp;&nbsp; (iii) Giraffe</div>
+            </div>
+            <!-- b -->
+            <div class="img-card">
+                <span class="img-tag">b</span>
+                <img src="https://commons.wikimedia.org/wiki/Special:FilePath/European_honey_bee_extracts_nectar.jpg" alt="Honey bee">
+                <div class="mcq-options">(i) Butterfly &nbsp;&nbsp; (ii) Honeybee &nbsp;&nbsp; (iii) Housefly</div>
+            </div>
+            <!-- c -->
+            <div class="img-card">
+                <span class="img-tag">c</span>
+                <img src="https://commons.wikimedia.org/wiki/Special:FilePath/Pir_panjal_tunnel.jpg" alt="Tunnel">
+                <div class="mcq-options">(i) Railway tracks &nbsp;&nbsp; (ii) Bridge &nbsp;&nbsp; (iii) Tunnel</div>
+            </div>
+            <!-- d -->
+            <div class="img-card">
+                <span class="img-tag">d</span>
+                <img src="https://commons.wikimedia.org/wiki/Special:FilePath/Hibiscus_rosa-sinensis_blossom.jpg" alt="Hibiscus flower">
+                <div class="mcq-options">(i) Daisy &nbsp;&nbsp; (ii) Marigold &nbsp;&nbsp; (iii) Hibiscus</div>
+            </div>
+            <!-- e -->
+            <div class="img-card">
+                <span class="img-tag">e</span>
+                <img src="https://www.gmrsports.in/static-assets/waf-images/78/8c/45/16-9/nilxt4oCfY.png?v=12.65&w=600" alt="Kabaddi match">
+                <div class="mcq-options">(i) Cricket &nbsp;&nbsp; (ii) Kabaddi &nbsp;&nbsp; (iii) Chess</div>
+            </div>
+            <!-- f -->
+            <div class="img-card">
+                <span class="img-tag">f</span>
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQYqcbb62p44Y4gTjWUIcUlFL6TUksm24XR7w&s" alt="Hospital building">
+                <div class="mcq-options">(i) Post office &nbsp;&nbsp; (ii) Bank &nbsp;&nbsp; (iii) Hospital</div>
+            </div>
+            <!-- g -->
+            <div class="img-card">
+                <span class="img-tag">g</span>
+                <img src="https://commons.wikimedia.org/wiki/Special:FilePath/Ferry_boats_moored_at_Gateway_of_India_02.jpg" alt="Ferry boats">
+                <div class="mcq-options">(i) Ship &nbsp;&nbsp; (ii) Train &nbsp;&nbsp; (iii) Ferry</div>
+            </div>
+            <!-- h -->
+            <div class="img-card">
+                <span class="img-tag">h</span>
+                <img src="https://i.guim.co.uk/img/media/60a1abe01ee10ef057576789bd5d4aae7aa1cbff/0_39_5040_3025/master/5040.jpg?width=1200&height=900&quality=85&auto=format&fit=crop&s=3772034e4a843c9891e2d42fda1c6524" alt="Railway porter">
+                <div class="mcq-options">(i) Coolie &nbsp;&nbsp; (ii) TTE &nbsp;&nbsp; (iii) Sweeper</div>
+            </div>
+            <!-- i -->
+            <div class="img-card">
+                <span class="img-tag">i</span>
+                <img src="https://assets.thehansindia.com/h-upload/2019/12/31/250322-rpf.jpg" alt="Railway police">
+                <div class="mcq-options">(i) Watchman &nbsp;&nbsp; (ii) Railway police &nbsp;&nbsp; (iii) Ticket seller</div>
+            </div>
+            <!-- j -->
+            <div class="img-card">
+                <span class="img-tag">j</span>
+                <img src="https://commons.wikimedia.org/wiki/Special:FilePath/Lychee_fruits_and_seed.jpg" alt="Litchi fruit">
+                <div class="mcq-options">(i) Cherries &nbsp;&nbsp; (ii) Litchi &nbsp;&nbsp; (iii) Mango</div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Q2 -->
+    <div class="section">
+        <div class="section-title">
+            <span>Q.2) True and False.</span>
+            <span class="marks-note">[1 × 10 = 10]</span>
+        </div>
+        <div class="tfa">1) Nandu was a baby elephant – ( &nbsp;&nbsp;&nbsp; ) <span class="marks">[1]</span></div>
+        <div class="tfa">2) A joint family means only mother, father and children live together – ( &nbsp;&nbsp;&nbsp; ) <span class="marks">[1]</span></div>
+        <div class="tfa">3) Both boys &amp; girls can play Kabaddi – ( &nbsp;&nbsp;&nbsp; ) <span class="marks">[1]</span></div>
+        <div class="tfa">4) Omana wrote about her journey in her diary – ( &nbsp;&nbsp;&nbsp; ) <span class="marks">[1]</span></div>
+        <div class="tfa">5) The Valley of Flowers is full of sand &amp; desert – ( &nbsp;&nbsp;&nbsp; ) <span class="marks">[1]</span></div>
+        <div class="tfa">6) Anita started keeping honeybees near her house – ( &nbsp;&nbsp;&nbsp; ) <span class="marks">[1]</span></div>
+        <div class="tfa">7) The Bishnoi people believed in cutting trees for money – ( &nbsp;&nbsp;&nbsp; ) <span class="marks">[1]</span></div>
+        <div class="tfa">8) Omana travelled only by train to reach her grandmother's house – ( &nbsp;&nbsp;&nbsp; ) <span class="marks">[1]</span></div>
+        <div class="tfa">9) Anita was a girl who wanted to study in school – ( &nbsp;&nbsp;&nbsp; ) <span class="marks">[1]</span></div>
+        <div class="tfa">10) When a baby is born, the family becomes bigger – ( &nbsp;&nbsp;&nbsp; ) <span class="marks">[1]</span></div>
+    </div>
+
+    <!-- Q3 -->
+    <div class="section">
+        <div class="section-title">
+            <span>Q.3) Fill in the Blanks.</span>
+            <span class="marks-note">[1 × 10 = 10]</span>
+        </div>
+        <div class="question">a) Madhubani is a folk Art <span class="fill-blank" style="width: 160px"></span>. <span class="marks">[1]</span></div>
+        <div class="question">b) <span class="fill-blank" style="width: 220px"></span> district in UP is famous for Itr. <span class="marks">[1]</span></div>
+        <div class="question">c) <span class="fill-blank" style="width: 240px"></span> is also a game where it is important to touch a player. <span class="marks">[1]</span></div>
+        <div class="question">d) The minimum age of marriage is <span class="fill-blank" style="width: 80px"></span> for men and <span class="fill-blank" style="width: 80px"></span> for women. <span class="marks">[1]</span></div>
+        <div class="question">e) Full form of RTE – <span class="fill-blank" style="width: 260px"></span>. <span class="marks">[1]</span></div>
+        <div class="question">f) Mother's elder sister is called <span class="fill-blank" style="width: 140px"></span> and mother is called <span class="fill-blank" style="width: 140px"></span>. <span class="marks">[1]</span></div>
+        <div class="question">g) The Valley of Flowers is in state of <span class="fill-blank" style="width: 160px"></span>. <span class="marks">[1]</span></div>
+        <div class="question">h) Honeybees live together in a <span class="fill-blank" style="width: 140px"></span>. <span class="marks">[1]</span></div>
+        <div class="question">i) Many colourful <span class="fill-blank" style="width: 140px"></span> grow in Valley of Flowers. <span class="marks">[1]</span></div>
+        <div class="question">j) Nandu loved to play in <span class="fill-blank" style="width: 160px"></span>. <span class="marks">[1]</span></div>
+    </div>
+
+    <!-- Q4 -->
+    <div class="section">
+        <div class="section-title">
+            <span>Q.4) Match the following.</span>
+            <span class="marks-note">[1 × 5 = 5]</span>
+        </div>
+        <div class="two-col">
+            <div>
+                1) Marathi<br />
+                2) Chess<br />
+                3) Sania Mirza<br />
+                4) Babita Phogat<br />
+                5) Banana Flower
+            </div>
+            <div>
+                a) Wrestler<br />
+                b) Maharashtra<br />
+                c) Kerala<br />
+                d) Indoor game<br />
+                e) Tennis
+            </div>
+        </div>
+    </div>
+
+    <!-- Q5 -->
+    <div class="section">
+        <div class="section-title">
+            <span>Q.5) Complete these Spellings.</span>
+            <span class="marks-note">[1 × 10 = 10]</span>
+        </div>
+        <div class="two-col">
+            <div>
+                1) Kh - j - d -<br />
+                2) V - ll - ge<br />
+                3) Ra - as - - an<br />
+                4) P - at - or -<br />
+                5) R - ser - at - on
+            </div>
+            <div>
+                6) D - st - - ct<br />
+                7) N - C - or<br />
+                8) C - ur - gl<br />
+                9) E - uc - ti - n<br />
+                10) Scr - am - ng
+            </div>
+        </div>
+    </div>
+
+    <!-- Q6 -->
+    <div class="section">
+        <div class="section-title">
+            <span>Q.6) Write the language of the following states.</span>
+            <span class="marks-note">[1 × 4 = 4]</span>
+        </div>
+        <div class="two-col">
+            <div>1) Karnataka – <span class="fill-blank" style="width:160px"></span></div>
+            <div>2) Goa – <span class="fill-blank" style="width:160px"></span></div>
+            <div>3) Gujarat – <span class="fill-blank" style="width:160px"></span></div>
+            <div>4) Kerala – <span class="fill-blank" style="width:160px"></span></div>
+        </div>
+    </div>
+
+    <!-- Q7 -->
+    <div class="section">
+        <div class="section-title">
+            <span>Q.7) Very Short Answer type questions.</span>
+            <span class="marks-note">[1 × 10 = 10]</span>
+        </div>
+        <div class="question">1) Group of elephant known as? – <span class="fill-blank" style="width: 240px"></span></div>
+        <div class="question">2) Who is the leader of herd? – <span class="fill-blank" style="width: 240px"></span></div>
+        <div class="question">3) What is the best time to start bee keeping? – <span class="fill-blank" style="width: 240px"></span></div>
+        <div class="question">4) What is the month for litchi to flower? – <span class="fill-blank" style="width: 240px"></span></div>
+        <div class="question">5) Anita lived in which state? – <span class="fill-blank" style="width: 240px"></span></div>
+        <div class="question">6) What is the full form of TTE? – <span class="fill-blank" style="width: 240px"></span></div>
+        <div class="question">7) How much weight Karnam Malleswari lift? – <span class="fill-blank" style="width: 240px"></span></div>
+        <div class="question">8) Name any two flowers used for decoration – <span class="fill-blank" style="width: 240px"></span></div>
+        <div class="question">9) What is Itr? – <span class="fill-blank" style="width: 240px"></span></div>
+        <div class="question">10) Omana reached to which state? – <span class="fill-blank" style="width: 240px"></span></div>
+    </div>
+
+    <!-- Q8 -->
+    <div class="section">
+        <div class="section-title">
+            <span>Q.8) Short Answer type questions.</span>
+            <span class="marks-note">[Total = 11]</span>
+        </div>
+        <div class="question">1) How trees are useful for us? Write any 2 points. <span class="marks">[2]</span><br />
+            <span class="fill-blank" style="width: 100%"></span><br />
+            <span class="fill-blank" style="width: 100%"></span>
+        </div>
+        <div class="question">2) Write any two things which you see in a Railway station. <span class="marks">[2]</span><br />
+            <span class="fill-blank" style="width: 100%"></span><br />
+            <span class="fill-blank" style="width: 100%"></span>
+        </div>
+        <div class="question">3) For what reason bridges are built? <span class="marks">[2]</span><br />
+            <span class="fill-blank" style="width: 100%"></span>
+        </div>
+        <div class="question question-with-image">4) Write any two points about Karnam Malleswari. <span class="marks">[2]</span>
+            <div class="image-container">
+                <img alt="Karnam Malleswari - Olympic weightlifter" src="https://resize.indiatv.in/resize/newbucket/1200_-/2020/05/pjimage-2020-05-18t182134-1589806329.jpg" />
+                <div class="image-label">Karnam Malleswari</div>
+            </div>
+            <span class="fill-blank" style="width: 100%"></span><br />
+            <span class="fill-blank" style="width: 100%"></span>
+        </div>
+        <div class="question">5) Name &nbsp;&nbsp;—&nbsp;&nbsp; Sports <span class="marks">[3]</span>
+            <div class="subpart" style="margin-top:6px;">
+                Mithali Raj – <span class="fill-blank" style="width: 200px"></span><br />
+                P. V. Sindhu – <span class="fill-blank" style="width: 200px"></span><br />
+                Saina Nehwal – <span class="fill-blank" style="width: 200px"></span>
+            </div>
+        </div>
+    </div>
+
+    <!-- Q9 -->
+    <div class="section">
+        <div class="section-title">
+            <span>Q.9) Long Answer type questions.</span>
+            <span class="marks-note">[Total = 10]</span>
+        </div>
+        <div class="question question-with-image">1) Write few lines about Kabaddi. <span class="marks">[4]</span>
+            <div class="image-container">
+                <img alt="Kabaddi match - Traditional Indian sport" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ7b1MnWUCWHvPj6UYVre16FzKLtG-dBzjkWw&s" />
+                <div class="image-label">Kabaddi Match</div>
+            </div>
+            <span class="fill-blank" style="width: 100%"></span><br />
+            <span class="fill-blank" style="width: 100%"></span><br />
+            <span class="fill-blank" style="width: 100%"></span><br />
+            <span class="fill-blank" style="width: 100%"></span>
+        </div>
+        <div class="question">2) What is RTE Act 2009? <span class="marks">[2]</span><br />
+            <span class="fill-blank" style="width: 100%"></span>
+        </div>
+        <div class="question">3) Write 1 indoor game and 2 outdoor game. <span class="marks">[2]</span><br />
+            Indoor – <span class="fill-blank" style="width: 200px"></span><br />
+            Outdoor – <span class="fill-blank" style="width: 200px"></span>, <span class="fill-blank" style="width: 200px"></span>
+        </div>
+        <div class="question">4) Draw any flower of your choice. <span class="marks">[2]</span><br />
+            <span class="small muted">[Space for drawing]</span>
+        </div>
+    </div>
+</body>
+
+</html>
